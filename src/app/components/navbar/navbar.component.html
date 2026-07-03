@@ -1,15 +1,29 @@
-<header class="header">
-    <a routerLink="/" class="logo">Portfolio.</a>
-
-    <div class="menu-icon" (click)="toggleMenu()">
-        <i [ngClass]="isMenuOpen ? 'bx bx-x' : 'bx bx-menu'"></i>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold fs-3 text-info" routerLink="/home">Portfolio.</a>
+    
+    <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#portfolioNavbar" aria-controls="portfolioNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="portfolioNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
+        <li class="nav-item">
+          <a class="nav-link fs-5" routerLink="/home" routerLinkActive="text-info active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-5" routerLink="/education" routerLinkActive="text-info active">Education</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-5" routerLink="/skills" routerLinkActive="text-info active">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-5" routerLink="/about" routerLinkActive="text-info active">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fs-5" routerLink="/contact" routerLinkActive="text-info active">Contact</a>
+        </li>
+      </ul>
     </div>
-
-    <nav class="navbar-links" [ngClass]="{'active': isMenuOpen}">
-        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Home</a>
-        <a routerLink="/education" routerLinkActive="active" (click)="closeMenu()">Education</a>
-        <a routerLink="/skills" routerLinkActive="active" (click)="closeMenu()">Skills</a>
-        <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a>
-        <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a>
-    </nav>
-</header>
+  </div>
+</nav>

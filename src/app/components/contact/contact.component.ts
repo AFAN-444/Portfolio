@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import emailjs from '@emailjs/browser'; // <-- Ab yeh line bina kisi error ke chalegi
+ import { Component } from '@angular/core';
+import emailjs from '@emailjs/browser';
 
 @Component({
   selector: 'app-contact',
@@ -8,11 +8,18 @@ import emailjs from '@emailjs/browser'; // <-- Ab yeh line bina kisi error ke ch
 })
 export class ContactComponent {
 
-  sendEmail(e: Event) {
+  // Yahan 4 arguments define kiye hain taaki HTML ka error khatam ho sake
+  sendEmail(e: Event, nameVal: string, emailVal: string, messageVal: string) {
     e.preventDefault();
-    console.log("Form submit trigger ho gaya!");
+    
+    // Khali spaces check karne ki validation
+    if (!nameVal.trim() || !emailVal.trim() || !messageVal.trim()) {
+      alert('Please fill out all required fields (Name, Email, and Message) before submitting!');
+      return;
+    }
 
-    // Apni asli keys yahan dalein
+    console.log("Validation clear! Sending via EmailJS...");
+
     const serviceID = 'service_opdzc1n';   
     const templateID = 'template_y46ovh9'; 
     const publicKey = '5uUiBh3W-uWtelQ7u';   
