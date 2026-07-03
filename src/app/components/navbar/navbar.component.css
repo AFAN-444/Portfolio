@@ -1,0 +1,78 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: .3s;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.navbar-links a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-left: 3.5rem;
+    transition: .3s;
+}
+
+.navbar-links a:hover,
+.navbar-links a.active {
+    color: var(--main-color);
+}
+
+/* Shuru mein icon desktop par chupa rahega */
+.menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none; 
+}
+
+/* --- Responsive Navbar Media Queries --- */
+@media (max-width: 768px) {
+    .header {
+        padding: 2rem 4%;
+    }
+
+    /* Mobile par hamburger icon show ho jaye */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Navbar-links dropdown ban jayega mobile par */
+    .navbar-links {
+        position: absolute;
+        top: 100%;
+        left: -100%; /* Shuru mien screen se bahar left par chupa rahega */
+        width: 100%;
+        padding: 1rem 4%;
+        background: var(--second-bg-color);
+        border-top: .1rem solid rgba(0,0,0,.2);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+        transition: .25s ease;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Jab active class trigger ho toh menu screen par aa jaye */
+    .navbar-links.active {
+        left: 0;
+    }
+
+    .navbar-links a {
+        display: block;
+        font-size: 2rem;
+        margin: 2rem 0; /* Mobile spacing */
+    }
+}

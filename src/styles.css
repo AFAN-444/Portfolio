@@ -1,0 +1,61 @@
+/* You can add global styles to this file, and also import other style files */
+/* Google Font import kar rahe hain clean look ke liye */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --bg-color: #081b29;
+    --second-bg-color: #112e42;
+    --text-color: #ededed;
+    --main-color: #00abf0;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* --- Global Media Queries for Responsiveness --- */
+
+/* Laptop aur Desktop Screens ke liye scale adjusting */
+@media (max-width: 1200px) {
+    html {
+        font-size: 56.25%; /* Font size scale down ho kar layout chota ho jayega */
+    }
+}
+
+/* Tablets / iPads (991px se niche) */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+/* Mobile Screens (768px se niche) */
+@media (max-width: 768px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+/* Chote Mobile Screens (520px se niche) */
+@media (max-width: 520px) {
+    html {
+        font-size: 45%;
+    }
+}

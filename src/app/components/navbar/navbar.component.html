@@ -1,0 +1,15 @@
+<header class="header">
+    <a routerLink="/" class="logo">Portfolio.</a>
+
+    <div class="menu-icon" (click)="toggleMenu()">
+        <i [ngClass]="isMenuOpen ? 'bx bx-x' : 'bx bx-menu'"></i>
+    </div>
+
+    <nav class="navbar-links" [ngClass]="{'active': isMenuOpen}">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Home</a>
+        <a routerLink="/education" routerLinkActive="active" (click)="closeMenu()">Education</a>
+        <a routerLink="/skills" routerLinkActive="active" (click)="closeMenu()">Skills</a>
+        <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a>
+        <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a>
+    </nav>
+</header>

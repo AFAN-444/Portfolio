@@ -1,0 +1,190 @@
+.about {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    background: var(--second-bg-color);
+    padding: 10rem 9% 2rem;
+}
+
+.heading {
+    position: absolute;
+    top: 10rem;
+    font-size: 5rem;
+    text-align: center;
+    width: 100%;
+}
+
+.heading span {
+    color: var(--main-color);
+}
+
+.about-img {
+    position: relative;
+    width: 35rem;
+    height: 35rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glowing-circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: .2rem solid var(--main-color);
+    box-shadow: 0 0 2rem var(--main-color);
+}
+
+.about-content {
+    max-width: 60rem;
+}
+
+.about-content h3 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.btn-box .btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 5rem;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .8rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--bg-color);
+    transition: .5s;
+}
+
+.btn-box .btn:hover {
+    color: var(--main-color);
+    background: transparent;
+}
+.glowing-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: .2rem solid var(--main-color);
+}
+
+/* --- About Section Base Styles --- */
+.about {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    background: var(--second-bg-color);
+    padding: 10rem 9% 2rem;
+}
+
+.heading {
+    position: absolute;
+    top: 10rem;
+    font-size: 5rem;
+    text-align: center;
+    width: 100%;
+}
+
+.heading span {
+    color: var(--main-color);
+}
+
+.about-img {
+    position: relative;
+    width: 35rem;
+    height: 35rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glowing-circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: .2rem solid var(--main-color);
+    box-shadow: 0 0 2rem var(--main-color);
+}
+
+.glowing-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.about-content {
+    max-width: 60rem;
+}
+
+/* --- Media Queries For About Responsiveness --- */
+
+/* Tablets / iPads (991px se niche) */
+@media (max-width: 991px) {
+    .about {
+        padding: 12rem 4% 2rem;
+        gap: 3rem;
+    }
+
+    .about-img {
+        width: 28rem;
+        height: 28rem;
+    }
+}
+
+/* Mobile Screens (768px se niche) */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column; /* Image upar aur text niche automatic shift ho jayega */
+        text-align: center;
+        padding: 15rem 5% 2rem;
+    }
+
+    .heading {
+        font-size: 4rem;
+        top: 6rem;
+    }
+
+    .about-img {
+        width: 25rem;
+        height: 25rem;
+        margin-bottom: 2rem;
+    }
+
+    .about-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .about-content p {
+        font-size: 1.5rem;
+        margin: 1.5rem 0 2.5rem;
+    }
+}
+
+/* Chote Mobile Screens (520px se niche) */
+@media (max-width: 520px) {
+    .about-img {
+        width: 20rem;
+        height: 20rem;
+    }
+    
+    .heading {
+        font-size: 3.5rem;
+    }
+}
